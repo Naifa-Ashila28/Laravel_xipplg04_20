@@ -57,7 +57,7 @@
                     action="{{ route('admin.students.destroy', $student->id) }}"
                     method="POST"
                     class="d-inline"
-                    onsubmit="return confirm('Apakah kamu yakin ingin menghapus data siswa ini?')"
+                    onsubmit="return confirm('Apakah anda yakin ingin menghapus data siswa ini?')"
                   >
                     @csrf
                     @method('DELETE')
