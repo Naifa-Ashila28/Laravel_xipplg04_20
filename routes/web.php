@@ -9,6 +9,5 @@ Route::get('/admin/dashboard', [DashboardController::class, 'index']);
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/students/create', [StudentController::class, 'create'])->name('admin.students.create');
     Route::resource('students', StudentController::class);
 });

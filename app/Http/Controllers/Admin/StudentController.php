@@ -47,7 +47,8 @@ class StudentController extends Controller
      */
     public function show(string $id)
     {
-        return view('admin.student.show', compact('student'));
+        $student = Student::findOrFail($id);
+        return view('admin.students.show', compact('student'));
     }
 
     /**
