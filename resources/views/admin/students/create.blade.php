@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="container">
-  <h1>Tambah Data Siswa</h1>
+  <h1>Tambah Data Siswa.</h1>
   <form action="{{ route('admin.students.store') }}" method="POST">
     @csrf
     <div class="mb-3">
@@ -25,6 +25,10 @@
     <div class="mb-3">
       <label>NISN</label>
       <input type="text" name="nisn" class="form-control" required>
+    </div>
+    <div class="mb-3">
+    <label for="jurusan" class="form-label">Jurusan</label>
+    <input type="text" name="jurusan" class="form-control" id="jurusan" value="{{ old('jurusan', $student->jurusan ?? '') }}">
     </div>
     <button type="submit" class="btn btn-success">Simpan</button>
   </form>
